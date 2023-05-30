@@ -1,0 +1,8 @@
+# Compiled source
+/.expo
+
+# Dependencies
+/node_modules
+
+# Environment variables
+.env
