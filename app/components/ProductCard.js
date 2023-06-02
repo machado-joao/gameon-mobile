@@ -29,9 +29,14 @@ const ProductCard = ({ product, handleNavigate }) => {
             >{`${product.discount}% de desconto`}</Text>
           </View>
         )}
-        <Text style={styles.price}>{`Preço: R$ ${product.price.toFixed(
-          2
-        )}`}</Text>
+        <Text style={styles.price}>{`Preço: R$ ${
+          product.discount > 0
+            ? (
+                product.price -
+                product.price * (product.discount / 100)
+              ).toFixed(2)
+            : product.price.toFixed(2)
+        }`}</Text>
         <View style={styles.platformsContainer}>
           {product.platforms.includes("Switch") && (
             <MaterialCommunityIcons

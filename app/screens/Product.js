@@ -81,7 +81,11 @@ const Product = ({ route }) => {
           <View style={styles.descriptionContainer}>
             <Text style={styles.productDescription}>{data.description}</Text>
           </View>
-          <ProductFooter handleClick={handleClick} price={data.price} />
+          <ProductFooter
+            handleClick={handleClick}
+            price={data.price}
+            discount={data.discount}
+          />
         </>
       )}
     </View>
